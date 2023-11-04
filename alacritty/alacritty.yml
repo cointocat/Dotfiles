@@ -1,0 +1,102 @@
+# 实时重载配置文件
+live_config_reload: true
+
+window:
+  decorations: buttonless
+  opacity: 0.95
+  title: Alacritty
+  dynamic_title: true
+
+schemes:
+  # Tokyo Night theme, based on both:
+  #   https://github.com/ghifarit53/tokyonight-vim
+  #   https://github.com/enkia/tokyo-night-vscode-theme
+  tokyo-night: &tokyo-night
+    # Default colors
+    primary:
+      background: '#1a1b26'
+      foreground: '#a9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '#32344a'
+      red:     '#f7768e'
+      green:   '#9ece6a'
+      yellow:  '#e0af68'
+      blue:    '#7aa2f7'
+      magenta: '#ad8ee6'
+      cyan:    '#449dab'
+      white:   '#787c99'
+
+    # Bright colors
+    bright:
+      black:   '#444b6a'
+      red:     '#ff7a93'
+      green:   '#b9f27c'
+      yellow:  '#ff9e64'
+      blue:    '#7da6ff'
+      magenta: '#bb9af7'
+      cyan:    '#0db9d7'
+      white:   '#acb0d0'
+
+  tokyo-night-storm: &tokyo-night-storm
+    # Default colors
+    primary:
+      background: '#24283b'
+      foreground: '#a9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '#32344a'
+      red:     '#f7768e'
+      green:   '#9ece6a'
+      yellow:  '#e0af68'
+      blue:    '#7aa2f7'
+      magenta: '#ad8ee6'
+      cyan:    '#449dab'
+      white:   '#9699a8'
+
+    # Bright colors
+    bright:
+      black:   '#444b6a'
+      red:     '#ff7a93'
+      green:   '#b9f27c'
+      yellow:  '#ff9e64'
+      blue:    '#7da6ff'
+      magenta: '#bb9af7'
+      cyan:    '#0db9d7'
+      white:   '#acb0d0'
+
+colors: *tokyo-night
+
+# Fonts
+font:
+  normal:
+    family: "CaskaydiaCove Nerd Font Mono"
+    style: Regular
+  bold:
+    family: "CaskaydiaCove Nerd Font Mono"
+    style: Bold
+  italic:
+    family: "CaskaydiaCove Nerd Font Mono"
+    style: Italic
+  bold_italic:
+    family: "CaskaydiaCove Nerd Font Mono"
+    style: Bold Italic
+
+  size: 18.0
+
+mouse:
+  hide_when_typing: true
+
+draw_bold_text_with_bright_colors: true
+
+scrolling:
+# 回滚缓冲区中的最大行数，制定为“0”将禁止滚动。
+  history: 100000
+
+  # 滚动行数
+  multiplier: 10
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t@="
